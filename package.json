@@ -1,0 +1,30 @@
+{
+  "name": "@meils/element-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "npm install",
+    "pull:variables": "node_modules/.bin/et --init ./element-variables.css",
+    "pull:theme-chalk": "node_modules/.bin/et --out theme-chalk",
+    "build:theme-custom": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-theme": "^2.0.1",
+    "element-theme-chalk": "^2.15.6"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.45.2"
+  },
+  "browserslist": [
+    "ie > 9",
+    "last 2 versions"
+  ]
+}
