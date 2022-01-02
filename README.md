@@ -22,16 +22,18 @@ npm i @meils/element-theme
 ```sh
 .
 ├── README.md
+├── build                       # 构建脚本
 ├── custom                      # 自定义样式
+└──── lib                       # 自定义样式构建后输出目录
 └──── theme                     # 组件级别的样式定制化
 └──── custom-variables.scss     # 完成对变量的自定义覆盖
-├── element-variables.css       # Element的默认主题变量（不需要改）
-├── gulpfile.js                 # 构建
-├── lib                         # 最终输出目录
+├── build                       # 最终样式输出目录
+├── resource                    # 原始主题样式资源
+└──── theme-chalk               # Element的默认主题样式（不需要改）
+└──── custom-variables.css     # Element的默认主题变量（不需要改）
 ├── node_modules
 ├── npm-shrinkwrap.json
 ├── package.json
-└── theme-chalk                 # Element的默认主题样式（不需要改）
 ```
 
 ## 如何运行
