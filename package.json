@@ -1,27 +1,37 @@
 {
   "name": "@meils/element-theme",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "自定义Element主题样式",
   "scripts": {
     "update": "npm install",
-    "pull:variables": "node_modules/.bin/et --init ./element-variables.css",
-    "pull:theme-chalk": "node_modules/.bin/et --out theme-chalk",
-    "build:theme-custom": "gulp build"
+    "pull:variables": "node_modules/.bin/et --init ./resources/element-variables.css",
+    "pull:theme-chalk": "node build/bin/pull-theme-chalk.js",
+    "build:theme-custom": "gulp build --gulpfile build/gulpfile.custom.js",
+    "build:theme-chalk": "node build/bin/compose-var.js && gulp build --gulpfile build/gulpfile.chalk.js",
+    "compose": "node build/bin/compose-css.js",
+    "build:all": "npm run build:theme-custom && npm run build:theme-chalk && npm run compose"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "resources",
+    "build",
+    "custom",
+    "lib"
+  ],
   "dependencies": {
     "element-theme": "^2.0.1",
     "element-theme-chalk": "^2.15.6"
   },
   "devDependencies": {
+    "file-save": "^0.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssmin": "^0.2.0",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.45.2"
+    "gulp-sass": "^4.0.2",
+    "sass": "~1.32.6",
+    "shelljs": "^0.8.4"
   },
   "browserslist": [
     "ie > 9",

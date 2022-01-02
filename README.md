@@ -22,7 +22,7 @@ npm i @meils/element-theme
 ```sh
 .
 ├── README.md
-├── customs                     # 自定义样式
+├── custom                     # 自定义样式
 └──── theme                     # 组件级别的样式定制化
 └──── custom-variables.scss     # 完成对变量的自定义覆盖
 ├── element-variables.css       # Element的默认主题变量（不需要改）
@@ -47,17 +47,24 @@ npm run pull:variables
 npm run pull:theme-chalk
 ```
 
-### 2. customs/theme 下写入自己的覆盖样式（支持组件样式的深度定制、整体主题风格的定制）
+### 2. custom/theme 下写入自己的覆盖样式（支持组件样式的深度定制、整体主题风格的定制）
+
+```css
+// eg: custom-variables.scss
+
+$--color-primary: pink; // 变量后不要包含 !default
+```
 
 ```css
 // eg: checkbox.scss
 
-@import "../../element-variables.css";
+@import "../../resources/theme-chalk/src/common/var.scss";
 @import "../custom-variables.scss";
 
 .el-checkbox {
   color: $--color-primary;
 }
+
 ```
 
 ### 3. 构建自定义主题样式
@@ -66,8 +73,14 @@ npm run pull:theme-chalk
 npm run build:theme-custom
 ```
 
-### 4. 组合默认样式和自定义样式，并完成输出
+### 4. 构建chalk主题样式
 
 ```sh
 npm run build:theme-chalk
+```
+
+### 4. 组合默认样式和自定义样式，并完成输出
+
+```sh
+npm run compose
 ```
