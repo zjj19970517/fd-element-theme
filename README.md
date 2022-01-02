@@ -5,6 +5,7 @@
 ## 安装
 
 ```sh
+# npm 还未发布
 npm i @meils/element-theme
 ```
 
