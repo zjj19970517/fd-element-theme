@@ -1,22 +1,23 @@
 # @meils/element-theme
 
-自定义 Element UI 组件库主题样式。
+为团队自定义 Element UI 组件库主题样式的方案；具体可查阅：[为团队定制 Element UI 主题样式的方案](https://mt7p8qo889.feishu.cn/wiki/wikcnJ7dAtKtgK2stqALFB6OH1b)
 
 ## 安装
 
 ```sh
-# npm 还未发布
-npm i @meils/element-theme
+npm i @meils/element-theme --registry=http://localhost:4873
+npm i element-ui -S
 ```
 
 ## 使用
 
-### 全量引入
+```sh
+# main.js
+import ElementUI from 'element-ui';
+import "@meils/element-theme/lib/theme-chalk/index.css";
 
-
-### 按需引入
-
-
+Vue.use(ElementUI);
+```
 ## 项目结构
 
 ```sh
@@ -67,7 +68,6 @@ $--color-primary: pink;
 .el-checkbox {
   color: $--color-primary;
 }
-
 ```
 
 ### 3. 构建自定义主题样式

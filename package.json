@@ -1,7 +1,7 @@
 {
   "name": "@meils/element-theme",
   "version": "1.0.0",
-  "description": "自定义Element主题样式",
+  "description": "为团队自定义 Element UI 组件库主题样式的方案",
   "scripts": {
     "update": "npm install",
     "pull:variables": "node_modules/.bin/et --init ./resources/element-variables.css",
