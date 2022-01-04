@@ -87,3 +87,7 @@ npm run build:theme-chalk
 ```sh
 npm run compose
 ```
+
+## 如何调试
+
+使用 npm link 的方式在一个单独的 element 项目里调试；
